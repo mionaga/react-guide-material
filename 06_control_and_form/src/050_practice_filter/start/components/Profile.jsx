@@ -1,6 +1,8 @@
+
 const Profile = ({ name, age, hobbies }) => {
+
   return (
-    <div>
+      <div>
       <hr />
       <div>Name: {name}</div>
       <div>Age: {age}</div>
@@ -13,6 +15,7 @@ const Profile = ({ name, age, hobbies }) => {
         </ul>
       </div>
     </div>
+
   );
 };
 
