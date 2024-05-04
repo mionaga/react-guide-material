@@ -4,17 +4,20 @@ const List = ({todos, deleteTodo}) => {
     }
 
     return (
+        <>
         <ul>
-            {todos.map((todo) => {
-                return (
+            { todos.map((todo) => {
+                return(
                     <div key={todo.id}>
                         <button onClick={() => complete(todo.id)}>完了</button>
                         {todo.content}
                     </div>
                 )
-            })}
+            }) }
         </ul>
+        </>
     );
 };
 
 export default List;
+  

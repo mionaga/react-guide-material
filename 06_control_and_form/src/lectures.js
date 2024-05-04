@@ -16,6 +16,7 @@ const lectures = [
   "110_multi_checkbox",
   "120_select",
   "130_reminder",
+  "140",
 ];
 
 export default lectures;

@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import List from "./List";
 import Form from "./Form";
 
@@ -7,37 +6,37 @@ const Todo = () => {
   const todosList = [
     {
       id: 1,
-      content: '買い物に行く'
+      content: "店予約する",
     },
     {
       id: 2,
-      content: '運動する'
+      content: "卵買う",
     },
     {
       id: 3,
-      content: 'いとちゃんと遊ぶ'
-    }
+      content: "郵便出す",
+    },
   ];
 
   const [todos, setTodos] = useState(todosList);
+
   const deleteTodo = (id) => {
     const newTodos = todos.filter((todo) => {
-      return id !== todo.id;
+      return todo.id !== id;
     });
+
     setTodos(newTodos);
-  }
+  };
+
   const createTodo = (todo) => {
     setTodos([...todos, todo]);
   };
 
   return (
     <>
-      <h2>Reminder</h2>
       <List todos={todos} deleteTodo={deleteTodo} />
       <Form createTodo={createTodo} />
     </>
-  )
-
+  );
 };
-
 export default Todo;
