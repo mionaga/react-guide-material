@@ -6,7 +6,7 @@ const Example = () => {
   return (
     <>
       {isDisp && <Timer/>}
-      <button onClick={() => setIsDisp(prev => !prev)}>トグル</button>
+      <button onClick={() => setIsDisp(prev => !prev)}>{isDisp? '非表示' : '表示' }</button>
     </>
   )
 }
@@ -47,10 +47,17 @@ const Timer = () => {
   }, [])
 
   return (
+    <>
     <h3>
       <time>{time}</time>
       <span>秒経過</span>
     </h3>
+    <div>
+      <button>スタート</button>
+      <button>リセット</button>
+    </div>
+    </>
+    
     );
 };
 

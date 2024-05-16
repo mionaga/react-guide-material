@@ -6,7 +6,7 @@ const Example = () => {
   useEffect(() => {
     console.log('useEffect is called');
     window.setInterval(() => {
-      setTime(prev => prev + 1);
+      // setTime(prev => prev + 1);
     }, 1000);
   }, [])
   
